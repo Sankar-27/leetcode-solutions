@@ -1,4 +1,4 @@
-// Last updated: 12/06/2026, 21:11:11
+// Last updated: 12/06/2026, 21:11:42
 1class Solution {
 2    public boolean canJump(int[] nums) {
 3        int gap = 1;
