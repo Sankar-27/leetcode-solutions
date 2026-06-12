@@ -1,11 +1,11 @@
-// Last updated: 29/05/2026, 12:00:13
-class Solution {
-    public boolean canJump(int[] nums) {
-        int gap = 1;
-        for(int i=nums.length-2; i>=0; i--) {
-            if(nums[i] < gap) gap ++;
-            else gap = 1;
-        }
-        return gap > 1 ? false : true;
-    }
-}
+// Last updated: 12/06/2026, 21:11:11
+1class Solution {
+2    public boolean canJump(int[] nums) {
+3        int gap = 1;
+4        for(int i=nums.length-2; i>=0; i--) {
+5            if(nums[i] < gap) gap ++;
+6            else gap = 1;
+7        }
+8        return gap > 1 ? false : true;
+9    }
+10}
