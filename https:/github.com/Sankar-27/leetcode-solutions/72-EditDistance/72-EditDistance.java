@@ -1,4 +1,4 @@
-// Last updated: 02/06/2026, 20:21:26
+// Last updated: 13/06/2026, 14:17:13
 1class Solution {
 2    public int minDistance(String word1, String word2) {
 3        int[][] cache = new int[word1.length() + 1][word2.length() + 1];
