@@ -1,23 +1,19 @@
-// Last updated: 29/05/2026, 11:59:51
-class Solution {
-    public List<List<Integer>> combine(int n, int k) {
-        List<List<Integer>> result = new ArrayList<>();
-        backtrack(1, n, k, new ArrayList<>(), result);
-        return result;
-    }
-
-    private void backtrack(int start, int n, int k, List<Integer> current, List<List<Integer>> result) {
-        if (current.size() == k) {
-            result.add(new ArrayList<>(current));
-            return;
-        }
-        if (current.size() + (n - start + 1) < k) {
-            return;
-        }
-        for (int i = start; i <= n; i++) {
-            current.add(i);
-            backtrack(i + 1, n, k, current, result);
-            current.remove(current.size() - 1);
-        }
-    }
-}
+// Last updated: 25/06/2026, 09:48:00
+1class Solution {
+2    List<List<Integer>> li=new ArrayList<>();
+3    public void rec(int n,int k,int in,List<Integer> l){
+4        if(l.size()==k){
+5            li.add(new ArrayList<>(l));
+6            return;
+7        }
+8        for(int i=in;i<=n;i++){
+9            l.add(i);
+10            rec(n,k,i+1,l);
+11            l.remove(l.size()-1);
+12        }
+13    }
+14    public List<List<Integer>> combine(int n, int k) {
+15        rec(n,k,1,new ArrayList<>());
+16        return li;
+17    }
+18}
